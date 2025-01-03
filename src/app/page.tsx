@@ -1,5 +1,5 @@
 import Link from "next/link";
-import TestQuery from "./TestQuery";
+// import TestQuery from "./TestQuery";
 
 const HomePage = () => {
   return (
@@ -16,14 +16,15 @@ const HomePage = () => {
                 <li><Link href="/contact" className="hover:underline">Contact</Link></li>
               </ul>
             </nav>
-           <Link href="/login" ><button type="button" className="bg-gray-700 text-white px-4 py-2 rounded-lg mt-2 md:mt-0">Sign In</button></Link>
+           {/* <Link href="/api/auth/signin" ><button type="button" className="bg-gray-700 text-white px-4 py-2 rounded-lg mt-2 md:mt-0">Sign In</button></Link> */}
+           <Link href="./login" ><button type="button" className="bg-gray-700 text-white px-4 py-2 rounded-lg mt-2 md:mt-0">Sign In2</button></Link>
           </div>
         </header>
         <main className="container mx-auto py-8 flex-grow"> {/* Allow main to grow and take available space */}
           <h2 className="text-3xl font-bold mb-4">Welcome to My Website!</h2>
           <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </main>
-        <TestQuery/>
+        
         <footer className="bg-black text-white p-4 mt-8">
           <div className="container mx-auto text-center">
             <p>&copy; 2022 My Website. All Rights Reserved.</p>
