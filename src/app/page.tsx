@@ -16,8 +16,7 @@ const HomePage = () => {
                 <li><Link href="/contact" className="hover:underline">Contact</Link></li>
               </ul>
             </nav>
-           {/* <Link href="/api/auth/signin" ><button type="button" className="bg-gray-700 text-white px-4 py-2 rounded-lg mt-2 md:mt-0">Sign In</button></Link> */}
-           <Link href="./login" ><button type="button" className="bg-gray-700 text-white px-4 py-2 rounded-lg mt-2 md:mt-0">Sign In2</button></Link>
+           <Link href="/api/auth/signin" ><button type="button" className="bg-gray-700 text-white px-4 py-2 rounded-lg mt-2 md:mt-0">Sign In</button></Link>
           </div>
         </header>
         <main className="container mx-auto py-8 flex-grow"> {/* Allow main to grow and take available space */}

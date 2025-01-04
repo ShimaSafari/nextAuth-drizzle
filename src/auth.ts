@@ -4,10 +4,10 @@ import GitHub from "next-auth/providers/github"
 import Nodemailer from "next-auth/providers/nodemailer"
 import { DrizzleAdapter } from "@auth/drizzle-adapter"
 import { db, accounts, sessions, users, verificationTokens } from "./db/schema/schema"
-import { SignJWT, jwtVerify } from "jose"
-import { encode, decode } from "next-auth/jwt"
+// import { SignJWT, jwtVerify } from "jose"
+// import { encode, decode } from "next-auth/jwt"
 import { v4 as uuidv4 } from 'uuid'
-import EmailProvider from "next-auth/providers/email"
+// import EmailProvider from "next-auth/providers/email"
 
 const secret = process.env.AUTH_SECRET || uuidv4()
 

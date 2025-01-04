@@ -5,25 +5,27 @@ import {
   text,
   primaryKey,
   integer,
+  date,
 } from "drizzle-orm/pg-core"
 import postgres from "postgres"
 import { drizzle } from "drizzle-orm/postgres-js"
 import type { AdapterAccountType } from "next-auth/adapters"
 
 export const connectionString = process.env.DATABASE_URL!;//!
-
 const pool = postgres(connectionString, { max: 1 });
-
 export const db = drizzle(pool);
+// const connectionString = process.env.DATABASE_URL!;
+// export const db = drizzle(connectionString);
 
 export const users = pgTable("user", {
   id: text("id")
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
-  name: text("name"),
+  username: text("username").notNull().unique(),
   email: text("email").unique(),
-  emailVerified: timestamp("emailVerified", { mode: "date" }),
-  image: text("image"),
+  password: text('password').notNull(),
+  createdAt: date("created_at").notNull().defaultNow(),
+  
 });
 
 export const accounts = pgTable(
